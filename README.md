@@ -1,1 +1,3 @@
 # hdbs-burgers
+
+so, I know that I need the text area to be my cheeseburger input and it needs to be added in with just the name. I get that, btu what I dont get is how to make these damn buttons work. I saw how it was done with the cats example at the end of the section for handlebars and tried copying and switching the variables, id, and class names to match what I have. With no luck. Now the .get I did the same thing with and that works, I just need some code to split the devoured and not devoured and also get the buttons to use the update feature to change that. But if I can't get the first single button to work, how am I going to get the more complex devour button to work with the burger that it is assigned to. 
