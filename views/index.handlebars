@@ -11,10 +11,12 @@
             <h3>Not Devoured</h3>
             <ol>
                 {{#each burger}}
-                <li>
-                    {{burger_name}}
-                    <button type="button" class="btn btn-secondary" id="change-devour">Devour</button>
-                </li>
+                    {{#unless this.devoured}}
+                    <li>
+                        {{burger_name}}
+                        <button type="button" class="btn btn-secondary" data-id="{{id}}" id="change-devour">Devour</button>
+                    </li>
+                    {{/unless}}
                 {{/each}}
             </ol>
 
@@ -23,9 +25,11 @@
             <h3>Devoured</h3>
             <ol>
                 {{#each burger}}
-                <li>
-                    {{burger_name}}
-                </li>
+                    {{#if this.devoured}}
+                    <li>
+                        {{burger_name}}
+                    </li>
+                    {{/if}}
                 {{/each}}
             </ol>
         </div>
@@ -38,7 +42,7 @@
         <form class="create-form">
 
             <div class="form-group" id="newBurgerForm">
-                <label for="ca">Burger Name:</label>
+                <label for="burger">Burger Name:</label>
                 <input type="text" id="newBurger" name="name">
             </div>
         </form>
